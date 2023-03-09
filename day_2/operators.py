@@ -19,3 +19,5 @@ print(x)
 
 # Comparison Operators
 print(x == y)
+print(x != y)
+print(x >= y)
