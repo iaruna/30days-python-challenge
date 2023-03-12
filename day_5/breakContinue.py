@@ -12,12 +12,12 @@ print( "Out of loop")
 #     print("5 X" ,j+1, "=" ,5 * (j+1))
 
 
-# i = 0
-# while True:
-#   print(i)
-#   i = i + 1
-#   if(i%10 == 0):
-#     break
+i = 0
+while True:
+  print(i)
+  i = i + 1
+  if(i%10 == 0):
+    break
 
 
 # for i in range(1,101,1):
@@ -28,7 +28,7 @@ print( "Out of loop")
 #         print("Miss")
 # print("Thank you")
 
-# for i in [2, 3, 4, 5, 7, 6, 8, 0]:
-#     if (i % 2 != 0):
-#         continue
-#     print(i)
+for i in [2, 3, 4, 5, 7, 6, 8, 0]:
+    if (i % 2 != 0):
+        continue
+    print(i)

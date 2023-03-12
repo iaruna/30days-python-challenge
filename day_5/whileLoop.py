@@ -1,4 +1,3 @@
-
 # don't run this because it through error
 # number = 0
 # while number < 10:
@@ -14,12 +13,12 @@ else:
 
 
 #  create a do while loop in Python, need to modify the while loop a bit in order to get similar behavior to a do while loop in other languages.
-# secret_word = "python"
-# counter = 0
-# while True:
-#     word = input("Enter the secret word: ").lower()
-#     counter = counter + 1
-#     if word == secret_word:
-#         break
-#     if word != secret_word and counter > 7: 
-#         break
+secret_word = "python"
+counter = 0
+while True:
+    word = input("Enter the secret word: ").lower()
+    counter = counter + 1
+    if word == secret_word:
+        break
+    if word != secret_word and counter > 7: 
+        break
