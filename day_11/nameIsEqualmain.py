@@ -1,0 +1,2 @@
+import aruna
+aruna.welcome()
