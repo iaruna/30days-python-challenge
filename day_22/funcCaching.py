@@ -1,3 +1,5 @@
+"""function cache is a technique for improving the performance of a program by storing the results of a function so that 
+you can reuse the results instead of recomputing them every time the function is called"""
 from functools import lru_cache
 import time
 
