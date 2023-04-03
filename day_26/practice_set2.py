@@ -171,3 +171,92 @@ for i in range(10):
     result = number1 + number2
     number1 = number2
     number2 = result
+
+print()
+# -------------------------------------------------------------------------------------------------------------------
+# Exercise 13: Find the factorial of a given number
+# For example: calculate the factorial of 5
+print("Solution 13:")
+n = 5
+factorial = 1
+if n < 0:
+    print("Factorial does not exist for negative numbers")
+elif n == 0:
+    print("The factorial of 0 is 1")
+else:
+    for i in range(1, n+1):
+        factorial = factorial * i
+    print(f"Factorial of {i} is {factorial}")
+
+print()
+# -------------------------------------------------------------------------------------------------------------------
+# Exercise 14: Reverse a given integer number
+# Given: 76542
+# Expected output: 24567
+print("Solution 14:")
+number = 76542
+rev_number = 0
+print(f"Given number is {number}")
+while number > 0:
+    reminder = number % 10
+    rev_number = (rev_number * 10) + reminder
+    number = number // 10
+print(f"Reverse nunber {rev_number}")
+
+print()
+# -------------------------------------------------------------------------------------------------------------------
+# Exercise 15: Use a loop to display elements from a given list present at odd index positions
+# Given:
+# my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# Expected output:
+# 20 40 60 80 100
+print("Solution 15:")
+my_list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+for i in my_list[1::2]:
+    print(i, end=" ")
+
+print()
+# -------------------------------------------------------------------------------------------------------------------
+# Exercise 16: Calculate the cube of all numbers from 1 to a given number
+print("Solution 16:")
+input_number = 6
+for i in range(1, input_number + 1):
+    print(f"Number is {i} and cube is {(i * i * i)}")
+
+print()
+# -------------------------------------------------------------------------------------------------------------------
+# Exercise 17: Find the sum of the series upto n terms
+print("Solution 17:")
+n = 5
+start = 2
+sum_seq = 0
+for i in range(0, n):
+    # print(start, end="+")
+    sum_seq += start
+    start = start * 10 + 2
+print("Sum of [2 + 22 + 222 + 2222 + 22222] series is:", sum_seq)
+
+print()
+# -------------------------------------------------------------------------------------------------------------------
+# Exercise 18: Print the following pattern
+# Write a program to print the following start pattern using the for loop
+# *
+# * *
+# * * *
+# * * * *
+# * * * * *
+# * * * *
+# * * *
+# * *
+# *
+print("Solution 18:")
+rows = 5
+for i in range(0, rows):
+    for j in range(0, i + 1):
+        print("*", end=' ')
+    print("\r")
+
+for i in range(rows, 0, -1):
+    for j in range(0, i - 1):
+        print("*", end=' ')
+    print("\r")
