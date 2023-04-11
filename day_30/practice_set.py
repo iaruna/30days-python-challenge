@@ -13,19 +13,19 @@ Array Shape is:  (4, 2)
 Array dimensions are  2
 Length of each element of array in bytes is  2 '''
 
-# print("Solution 1:")
+print("Solution 1:")
 import numpy
 
-# firstArray = numpy.empty([4,2], dtype = numpy.uint16) 
-# print("Printing Array")
-# print(firstArray)
+firstArray = numpy.empty([4,2], dtype = numpy.uint16) 
+print("Printing Array")
+print(firstArray)
 
-# print("Printing numpy array Attributes")
-# print("1>. Array Shape is: ", firstArray.shape)
-# print("2>. Array dimensions are ", firstArray.ndim)
-# print("3>. Length of each element of array in bytes is ", firstArray.itemsize)
+print("Printing numpy array Attributes")
+print("1>. Array Shape is: ", firstArray.shape)
+print("2>. Array dimensions are ", firstArray.ndim)
+print("3>. Length of each element of array in bytes is ", firstArray.itemsize)
 
-# print()
+print()
 # -----------------------------------------------------------------------------------------------------------
 ''' Exercise 2: Create a 5X2 integer array from a range between 100 to 200 such that the difference between each element is 10
 Expected Output:
@@ -36,13 +36,13 @@ Creating 5X2 array using numpy.arange
  [160 170]
  [180 190]] '''
 
-# print("Solution 2:")
-# print("Creating 5 X 2 integer array using numpy.arange")
-# Array = numpy.arange(100, 200, 10)
-# Array =Array.reshape(5, 2)
-# print(Array)
+print("Solution 2:")
+print("Creating 5 X 2 integer array using numpy.arange")
+Array = numpy.arange(100, 200, 10)
+Array =Array.reshape(5, 2)
+print(Array)
 
-# print()
+print()
 # -----------------------------------------------------------------------------------------------------------
 ''' Exercise 3: Following is the provided numPy array. Return array of items by taking the third column from all rows
 sampleArray = numpy.array([[11 ,22, 33], [44, 55, 66], [77, 88, 99]])
@@ -54,15 +54,15 @@ Printing Input Array
 Printing array of items in the third column from all rows
 [33 66 99] '''
 
-# print("Solution 3:")
-# print("Printing Input Array")
-# sampleArray = numpy.array([[11 ,22, 33], [44, 55, 66], [77, 88, 99]])
-# print(sampleArray)
-# print("Printing array of items in the third column from all rows")
-# ArrayOutput = sampleArray[...,2]
-# print(ArrayOutput)
+print("Solution 3:")
+print("Printing Input Array")
+sampleArray = numpy.array([[11 ,22, 33], [44, 55, 66], [77, 88, 99]])
+print(sampleArray)
+print("Printing array of items in the third column from all rows")
+ArrayOutput = sampleArray[...,2]
+print(ArrayOutput)
 
-# print()
+print()
 # -----------------------------------------------------------------------------------------------------------
 ''' Exercise 4: Return array of odd rows and even columns from below numpy array
 sampleArray = numpy.array([[3 ,6, 9, 12], [15 ,18, 21, 24], [27 ,30, 33, 36], [39 ,42, 45, 48], [51 ,54, 57, 60]])
@@ -78,15 +78,15 @@ Printing array of odd rows and even columns
  [30 36]
  [54 60]] '''
 
-# print("Solution 4:")
-# sampleArray = numpy.array([[3 ,6, 9, 12], [15 ,18, 21, 24], [27 ,30, 33, 36], [39 ,42, 45, 48], [51 ,54, 57, 60]])
-# print("Printing Input Array")
-# print(sampleArray)
-# print("Printing array of odd rows and even columns")
-# newArray = sampleArray[::2, 1::2]
-# print(newArray)
+print("Solution 4:")
+sampleArray = numpy.array([[3 ,6, 9, 12], [15 ,18, 21, 24], [27 ,30, 33, 36], [39 ,42, 45, 48], [51 ,54, 57, 60]])
+print("Printing Input Array")
+print(sampleArray)
+print("Printing array of odd rows and even columns")
+newArray = sampleArray[::2, 1::2]
+print(newArray)
 
-# print()
+print()
 # -----------------------------------------------------------------------------------------------------------
 ''' Exercise 5: Create a result array by adding the following two NumPy arrays. Next, modify the result array by calculating the square of each element
 arrayOne = numpy.array([[5, 6, 9], [21 ,18, 27]])
@@ -99,18 +99,18 @@ Result array after calculating the square root of all elements
 [[ 400 1521 1089]
  [ 625  625  784]] '''
 
-# print("Solution 5:")
-# print("addition of two arrays is ")
-# arrayOne = numpy.array([[5, 6, 9], [21 ,18, 27]])
-# arrayTwo = numpy.array([[15 ,33, 24], [4 ,7, 1]])
-# addition = arrayOne + arrayTwo
-# print(addition)
+print("Solution 5:")
+print("addition of two arrays is ")
+arrayOne = numpy.array([[5, 6, 9], [21 ,18, 27]])
+arrayTwo = numpy.array([[15 ,33, 24], [4 ,7, 1]])
+addition = arrayOne + arrayTwo
+print(addition)
 
-# print("Result array after calculating the square root of all elements")
-# for num in numpy.nditer(addition, op_flags = ['readwrite']):num[...] = num*num
-# print(addition)
+print("Result array after calculating the square root of all elements")
+for num in numpy.nditer(addition, op_flags = ['readwrite']):num[...] = num*num
+print(addition)
 
-# print()
+print()
 # -----------------------------------------------------------------------------------------------------------
 ''' Exercise 6: Split the array into four equal-sized sub-arrays
 Note: Create an 8X3 integer array from a range between 10 to 34 such that the difference between each element is 1 and then Split the array into four equal-sized sub-arrays.
@@ -225,16 +225,9 @@ print()
 # Exercise 10: Create two 2-D arrays and Plot them using matplotlib
 
 print("Solution 10:")
-print("Printing Original array")
-sampleArray = numpy.array([[34,43,73],[82,22,12],[53,94,66]]) 
-print (sampleArray)
+import matplotlib.pyplot as plt
 
-print("Array after deleting column 2 on axis 1")
-sampleArray = numpy.delete(sampleArray , 1, axis = 1) 
-print (sampleArray)
+H = numpy.array([[34,43,73],[82,22,12],[53,94,66]])
 
-arr = numpy.array([[10,10,10]])
-
-print("Array after inserting column 2 on axis 1")
-sampleArray = numpy.insert(sampleArray , 1, arr, axis = 1) 
-print (sampleArray)
+plt.imshow(H, interpolation='none')
+plt.show()
